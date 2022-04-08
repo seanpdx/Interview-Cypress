@@ -9,7 +9,7 @@
       "generate": true,
       "outputFolder": "cypress/testReports",
       "filePrefix": "",
-      "fileSuffix": ".cucumber"
+      "fileSuffix": ".report"
     }
   },
   "scripts": {
