@@ -1,0 +1,6 @@
+{
+    "testFiles": "**/*.feature",
+    "baseUrl": "https://peach-borrower.peach-dev.finance/",
+    "viewportWidth": 1980,
+    "viewportHeight": 1080
+  }
