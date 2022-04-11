@@ -41,6 +41,4 @@ Then("I can see my recent activity", (dataTable) => {
 
     loanSummaryActions.assertStatements(statementDate);
 
-  
-   
    });
