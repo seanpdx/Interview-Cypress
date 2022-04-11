@@ -51,9 +51,12 @@ class loanOptionsActions {
 
     }
 
-    static removeBankAccount(bank:string){
+    static removeBankAccount(bankName:string){
 
-        // cy.get('header').parent()
+      //   cy.contains(bankName).parents('div.label-group').children().contains('Remove').click();
+      cy.contains(bankName).should('be.visible');
+      cy.contains(bankName).parent().parent().parent().contains('Remove').click();
+
     }
 
 }

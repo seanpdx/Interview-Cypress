@@ -7,6 +7,7 @@ let paymentDay: string
 let accountName: string;
 let accountRoutingNumber: string;
 let accountNumber: string;
+let bankName: string;
 
 
 Then("I am able to change the loan due date", (dataTable) => {
@@ -28,6 +29,12 @@ Then("I am able to change the loan due date", (dataTable) => {
 
     loanOptionsActions.addBankAccount(accountName, accountRoutingNumber, accountNumber);
 
+});
 
+Then("I am able to remove a bank account", (dataTable) => {
+    let stepData = dataTable.hashes();
+    bankName = stepData[0]['bankName'];
+
+    loanOptionsActions.removeBankAccount(bankName);
 
 });

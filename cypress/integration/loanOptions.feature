@@ -20,3 +20,5 @@ Feature: Loan Options are available to the user
             | name        | routingNumber | accountNumberDigits |
             | Test Person | 011401533     | 5                   |
         Then I am able to remove a bank account
+            | bankName         |
+            | CITIZENS BANK NA |
