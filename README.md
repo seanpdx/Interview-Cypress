@@ -9,7 +9,7 @@ Note: I developed on a Ubuntu VM, with Chrome installed.
 ### Running Tests
 
 To run the login test tag in Chrome: `./node_modules/.bin/cypress-tags run -e TAGS='@login' --browser chrome`
-Replace the login tag 
+Replace the login tag with any of the ones listed below.
 
 To generate the Cucumber Test Report: `node report.js`
 
