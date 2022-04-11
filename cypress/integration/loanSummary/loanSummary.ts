@@ -30,7 +30,9 @@ Then("I can see my recent activity", (dataTable) => {
     payoffDate =  stepData[0]['payoffDate'];
 
     loanSummaryActions.assertLoanSummary(amountPaid, amountRemaining, principalPaid, interestPaid, payoffDate);
+    // STABILITY NOTES
     // amountRemaining seems to be changing.
+    // loan payoff date seems to be changing, have to revisit in the future.
   
    
    });
