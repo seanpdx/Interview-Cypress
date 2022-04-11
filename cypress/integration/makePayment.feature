@@ -7,7 +7,7 @@ Feature: Make a payment on outstanding loan
             | email                                   | password   |
             | auto.user+bo-2k6e-4plk@peachfinance.com | hello12345 |
         And I schedule a payment for today
-            | amount |
-            | 1      |
+            | amount | paymentAccount     |
+            | 1      | Bank Account *6789 |
         Then the payment is successfully scheduled
         And the payment shows in the activity feed
