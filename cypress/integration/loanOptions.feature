@@ -22,8 +22,7 @@ Feature: Loan Options are available to the user
             | bankName         |
             | CITIZENS BANK NA |
 
-    @current
-    Scenario: Change Nickname
+    Scenario: Change Loan Nickname
         Given I am on the Peach Finance login page
         When I login with correct credentials
             | email                                   | password   |

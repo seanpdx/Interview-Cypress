@@ -43,5 +43,4 @@ Then("I change my nickname", () => {
 
     loanOptionsActions.changeNickname();
 
-
 });
