@@ -30,5 +30,21 @@ Then("the payment shows in the activity feed", () => {
     
 });
 
+Then("I enable Autopay", (dataTable) => {
+    let stepData = dataTable.hashes();
+    let autopayFrequency: string = stepData[0]['frequency'];
+    let autopayAccount: string = stepData[0]['paymentAccount'];
+
+    PaymentActions.enableAutopay(autopayFrequency,autopayAccount);
+    
+});
+
+Then("I disable Autopay", () => {
+    
+
+    
+});
+
+
 
 

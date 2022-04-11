@@ -32,5 +32,13 @@ class PaymentActions {
        cy.contains('Done').click();
     }
 
+    static enableAutopay(frequency: string, paymentAccount: string) {
+
+        // Enable Autopay
+        cy.contains('Enable Autopay').click();
+
+
+    }
+
 }
 export default PaymentActions;
