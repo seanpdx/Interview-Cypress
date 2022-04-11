@@ -8,6 +8,7 @@ let amountRemaining: string;
 let principalPaid: string;
 let interestPaid: string;
 let payoffDate: string;
+let statementDate: string;
 
 
 
@@ -36,6 +37,9 @@ Then("I can see my recent activity", (dataTable) => {
 
    Then("I can view my statements", (dataTable) => {
     let stepData = dataTable.hashes();
+    statementDate = stepData[0]['statementDate'];
+
+    loanSummaryActions.assertStatements(statementDate);
 
   
    

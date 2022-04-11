@@ -13,5 +13,5 @@ Feature: Activity, Loan Summary, and Documents are available to the user
             | amountPaid | amountRemaining | principalPaid | interestPaid | payoffDate   |
             | $776.31    | $5,901.52       | $658.73       | $117.58      | Aug 17, 2023 |
         And I can view my statements
-            | statement                             |
+            | statementDate                         |
             | Feb 18, 2022 – Mar 17, 2022 statement |

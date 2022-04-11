@@ -19,5 +19,14 @@ class loanSummaryActions {
 
     }
 
+    static assertStatements(statementDate: string) {
+
+        cy.contains('description').click();
+        cy.contains(statementDate).should('be.visible');
+
+        // TODO verify file download and view
+
+    }
+
 }
 export default loanSummaryActions;
