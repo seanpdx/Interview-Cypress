@@ -1,4 +1,4 @@
-@makePayment
+@makePayment @priority
 Feature: Make a payment on outstanding loan
 
     Scenario: Schedule a payment for today

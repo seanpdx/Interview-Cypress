@@ -1,4 +1,4 @@
-@login
+@login @priority
 Feature: Login to Peach Finance
 
   Scenario: Login to Peach Finance, then Sign Out

@@ -1,4 +1,4 @@
-@loanOptions
+@loanOptions @priority
 Feature: Loan Options are available to the user
 
     Scenario: Change loan due date
