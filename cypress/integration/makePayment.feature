@@ -20,6 +20,6 @@ Feature: Make a payment on outstanding loan
             | auto.user+bo-2k6e-4plk@peachfinance.com | hello12345 |
         Then I enable Autopay
             | frequency | paymentAccount     | day    |
-            | Weekly    | Bank Account *6789 | Monday |
+            | Weekly    | Bank Account *6789 | Friday |
         And I disable Autopay
 

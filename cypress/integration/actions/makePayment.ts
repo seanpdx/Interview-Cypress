@@ -32,7 +32,7 @@ class PaymentActions {
        cy.contains('Done').click();
     }
 
-    static enableAutopay(frequency: string, paymentAccount: string, day: string) {
+    static enableAutopay(frequency: string, paymentAccount: string, autopayDay: string) {
 
         // Enable Autopay
         cy.contains('Enable Autopay').click();
@@ -40,6 +40,10 @@ class PaymentActions {
 
         cy.contains('Select frequency').click({ force: true });
         cy.contains(frequency).click({ force: true });
+
+        cy.contains('DAY').should('be.visible');
+        cy.contains('Select day').click({ force: true });
+        cy.contains(autopayDay).click({ force: true });
 
         cy.contains('Select payment method').click({ force: true });
         cy.contains(paymentAccount).click({ force: true });
