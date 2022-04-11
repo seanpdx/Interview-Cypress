@@ -12,7 +12,6 @@ Feature: Make a payment on outstanding loan
         Then the payment is successfully scheduled
         And the payment shows in the activity feed
 
-    @current
     Scenario: Enable and Disable Autopay
         Given I am on the Peach Finance login page
         When I login with correct credentials
