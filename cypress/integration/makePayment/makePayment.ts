@@ -42,7 +42,7 @@ Then("I enable Autopay", (dataTable) => {
 
 Then("I disable Autopay", () => {
 
-   // PaymentActions.disableAutopay();
+    PaymentActions.disableAutopay();
     
 
     
