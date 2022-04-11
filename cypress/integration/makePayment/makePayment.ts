@@ -34,12 +34,15 @@ Then("I enable Autopay", (dataTable) => {
     let stepData = dataTable.hashes();
     let autopayFrequency: string = stepData[0]['frequency'];
     let autopayAccount: string = stepData[0]['paymentAccount'];
+    let paymentDay: string = stepData[0]['day'];
 
-    PaymentActions.enableAutopay(autopayFrequency,autopayAccount);
-    
+    PaymentActions.enableAutopay(autopayFrequency,autopayAccount, paymentDay);
+
 });
 
 Then("I disable Autopay", () => {
+
+   // PaymentActions.disableAutopay();
     
 
     

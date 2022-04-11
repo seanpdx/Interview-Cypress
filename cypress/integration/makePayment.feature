@@ -19,7 +19,7 @@ Feature: Make a payment on outstanding loan
             | email                                   | password   |
             | auto.user+bo-2k6e-4plk@peachfinance.com | hello12345 |
         Then I enable Autopay
-            | frequency    | paymentAccount     |
-            | on due dates | Bank Account *6789 |
-        And I disable Autopay   
+            | frequency | paymentAccount     | day    |
+            | Weekly    | Bank Account *6789 | Monday |
+        And I disable Autopay
 
