@@ -28,6 +28,8 @@ class PaymentActions {
     }
     static assertPaymentScheduled() {
         cy.get('span[data-testid="payment-successful-message"]').should('include.text', 'Payment was successfully scheduled.');
+       
+       cy.contains('Done').click();
     }
 
 }

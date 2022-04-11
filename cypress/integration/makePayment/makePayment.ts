@@ -25,6 +25,7 @@ Then("the payment is successfully scheduled", () => {
 });
 
 Then("the payment shows in the activity feed", () => {
+    cy.url().should('include', 'activity');
 
     
 });
