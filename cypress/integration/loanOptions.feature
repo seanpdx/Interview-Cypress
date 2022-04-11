@@ -28,3 +28,11 @@ Feature: Loan Options are available to the user
             | email                                   | password   |
             | auto.user+bo-2k6e-4plk@peachfinance.com | hello12345 |
         Then I change my nickname
+
+    @current
+    Scenario: Email Payoff Statement
+        Given I am on the Peach Finance login page
+        When I login with correct credentials
+            | email                                   | password   |
+            | auto.user+bo-2k6e-4plk@peachfinance.com | hello12345 |
+        Then I email my payoff statement

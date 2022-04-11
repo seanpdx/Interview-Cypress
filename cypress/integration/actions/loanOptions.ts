@@ -51,10 +51,10 @@ class loanOptionsActions {
 
     }
 
-    static removeBankAccount(bankName:string){
+    static removeBankAccount(bankName: string) {
 
-      cy.contains(bankName).should('be.visible');
-      cy.contains(bankName).parent().parent().parent().contains('Remove').click();
+        cy.contains(bankName).should('be.visible');
+        cy.contains(bankName).parent().parent().parent().contains('Remove').click();
 
     }
 
@@ -63,14 +63,29 @@ class loanOptionsActions {
         cy.get('button[label="Loan"]').click();
         cy.contains('Change nickname').click();
 
-        let nickname  = 'Loan' + (Math.floor(Math.random() * 90000) + 10000).toString();
+        let nickname = 'Loan' + (Math.floor(Math.random() * 90000) + 10000).toString();
 
         cy.get('input[placeholder="Loan"]').click({ force: true }).clear().type(nickname);
         cy.contains('Update').click();
 
         cy.contains(nickname).should('be.visible');
 
+    }
 
+    static emailPayoffStatement() {
+
+        cy.get('button[label="Loan"]').click();
+        cy.contains('Get payoff statement').click();
+
+        cy.get('input[name="Email"]').check({ force: true });
+
+        cy.contains('SELECT ADDRESS TO SEND TO').should('be.visible');
+
+        cy.contains('Select email').click({ force: true });
+        cy.contains('auto.user').click({ force: true });
+        cy.contains('Submit').click();
+
+        cy.contains('Payoff statement successfully sent.').should('be.visible');
 
 
     }

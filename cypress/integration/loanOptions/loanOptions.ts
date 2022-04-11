@@ -44,3 +44,9 @@ Then("I change my nickname", () => {
     loanOptionsActions.changeNickname();
 
 });
+
+Then("I email my payoff statement", () => {
+
+    loanOptionsActions.emailPayoffStatement();
+
+});
