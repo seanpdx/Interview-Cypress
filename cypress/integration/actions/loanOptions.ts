@@ -53,9 +53,25 @@ class loanOptionsActions {
 
     static removeBankAccount(bankName:string){
 
-      //   cy.contains(bankName).parents('div.label-group').children().contains('Remove').click();
       cy.contains(bankName).should('be.visible');
       cy.contains(bankName).parent().parent().parent().contains('Remove').click();
+
+    }
+
+    static changeNickname() {
+
+        cy.get('button[label="Loan"]').click();
+        cy.contains('Change nickname').click();
+
+        let nickname  = 'Loan' + (Math.floor(Math.random() * 90000) + 10000).toString();
+
+        cy.get('input[placeholder="Loan"]').click({ force: true }).clear().type(nickname);
+        cy.contains('Update').click();
+
+        cy.contains(nickname).should('be.visible');
+
+
+
 
     }
 

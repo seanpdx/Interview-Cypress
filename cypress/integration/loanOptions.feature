@@ -10,7 +10,6 @@ Feature: Loan Options are available to the user
             | frequency     | paymentDay   |
             | Twice a month | end of month |
 
-    @current
     Scenario: Add and Remove a Bank account
         Given I am on the Peach Finance login page
         When I login with correct credentials
@@ -22,3 +21,11 @@ Feature: Loan Options are available to the user
         Then I am able to remove a bank account
             | bankName         |
             | CITIZENS BANK NA |
+
+    @current
+    Scenario: Change Nickname
+        Given I am on the Peach Finance login page
+        When I login with correct credentials
+            | email                                   | password   |
+            | auto.user+bo-2k6e-4plk@peachfinance.com | hello12345 |
+        Then I change my nickname

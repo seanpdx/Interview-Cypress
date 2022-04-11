@@ -38,3 +38,10 @@ Then("I am able to remove a bank account", (dataTable) => {
     loanOptionsActions.removeBankAccount(bankName);
 
 });
+
+Then("I change my nickname", () => {
+
+    loanOptionsActions.changeNickname();
+
+
+});
